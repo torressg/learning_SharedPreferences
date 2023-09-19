@@ -18,3 +18,8 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - lib/images/paisagem1.jpg
+    - lib/images/paisagem2.jpg
+    - lib/images/user1.jpg
+    - lib/images/user2.jpg
