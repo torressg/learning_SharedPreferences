@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:learning_shared_preference/pages/dados_cadastrais.dart';
+import 'package:learning_shared_preference/pages/randomNumber_page.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});
@@ -62,6 +63,32 @@ class CustomDrawer extends StatelessWidget {
                       builder: (context) => const DadosCadPage(
                           texto: "Meus dados",
                           dados: ["Nome", "Data de Nascimento"])))
+            },
+          ),
+          const Divider(),
+          const SizedBox(
+            height: 10,
+          ),
+          InkWell(
+            child: Container(
+              padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+              width: double.infinity,
+              child: const Row(
+                children: [
+                  Icon(Icons.format_list_numbered_rounded),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text('Contador de números'),
+                ],
+              ),
+            ),
+            onTap: () => {
+              Navigator.pop(context),
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext bc) => const RandomNumbersPage()))
             },
           ),
           const Divider(),
