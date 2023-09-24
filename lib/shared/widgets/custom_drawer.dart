@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learning_shared_preference/pages/config_page.dart';
 import 'package:learning_shared_preference/pages/dados_cadastrais.dart';
 import 'package:learning_shared_preference/pages/randomNumber_page.dart';
 
@@ -158,7 +159,13 @@ class CustomDrawer extends StatelessWidget {
                 ],
               ),
             ),
-            onTap: () => {},
+            onTap: () => {
+              Navigator.pop(context),
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (BuildContext bc) => const ConfigPage()))
+            },
           ),
           const Divider(),
           const SizedBox(
